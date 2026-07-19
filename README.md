@@ -9,7 +9,7 @@
 <br />
 
 <div align="center">
-  <img src="assets/lanyard.svg" alt="Aryant Shrirang profile lanyard" width="280" />
+  <img src="assets/lanyard.svg" alt="Aryant Shrirang — developer ID lanyard badge" width="240" />
 </div>
 
 <br />
@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="mailto:aryantshrirang5@gmail.com">Email</a> ·
-  <a href="https://linkedin.com/in/aryant-shrirang-62707122a">LinkedIn</a> ·
+  <a href="https://www.linkedin.com/in/aryant-shrirang-62707122a">LinkedIn</a> ·
   <a href="tel:+918982780884">+91 8982780884</a>
 </p>
 
@@ -126,11 +126,23 @@ CGPA: 8.1 / 10.0
 ## GitHub Statistics
 
 <div align="center">
-  <img src="assets/stats.svg" alt="GitHub statistics for Aryant Shrirang" width="100%" />
+  <img src="assets/stats.svg" alt="Engineering overview statistics for Aryant Shrirang" width="100%" />
   <br /><br />
-  <img src="assets/langs.svg" alt="Most used languages" width="100%" />
+  <img src="assets/langs.svg" alt="Technology expertise by category" width="100%" />
   <br /><br />
-  <img src="assets/trophies.svg" alt="GitHub trophies" width="100%" />
+  <img src="assets/trophies.svg" alt="Professional achievement highlights" width="100%" />
+</div>
+
+---
+
+## Contribution Snake
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake-light.svg" />
+    <img alt="Animated GitHub contribution snake for soni-coader" src="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake.svg" width="100%" />
+  </picture>
 </div>
 
 ---
@@ -153,7 +165,7 @@ Open to conversations about full-stack product roles, AI automation initiatives,
 | Channel | Details |
 | --- | --- |
 | **Email** | [aryantshrirang5@gmail.com](mailto:aryantshrirang5@gmail.com) |
-| **LinkedIn** | [linkedin.com/in/aryant-shrirang-62707122a](https://linkedin.com/in/aryant-shrirang-62707122a) |
+| **LinkedIn** | [linkedin.com/in/aryant-shrirang-62707122a](https://www.linkedin.com/in/aryant-shrirang-62707122a) |
 | **Phone** | [+91 8982780884](tel:+918982780884) |
 
 Prefer email or LinkedIn for professional inquiries.

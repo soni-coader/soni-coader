@@ -80,7 +80,7 @@ Component inventory for `banner.svg`. Each component maps to a layout region abo
 | Ambient Glow | Large soft radial washes — Primary violet and optional Accent cyan at 15–25% opacity; max one of each |
 | Particles | Sparse floating nodes/dots at 10–40% opacity; slow drift; never dense |
 
-**Source asset:** `assets/background-pattern.svg` (reusable grid / particle / glow defs referenced or inlined by the banner)
+**Source:** Grid / glow / particle defs are inlined in `banner.svg` / `banner-light.svg`
 
 ## Identity
 
@@ -103,7 +103,7 @@ Component inventory for `banner.svg`. Each component maps to a layout region abo
 | Code Snippet | Short calm snippet suggesting MERN / RAG / n8n — few lines, readable size |
 | Tech Chips | Integrated labels inside panel footer/rail only (React · Node · RAG · n8n) — not detached over the hero |
 
-**Source asset:** `assets/terminal-icons.svg` (window controls, status marks, chip icons — flat SVG, consistent size)
+**Source:** Window controls and chip marks are inlined in `banner.svg` / `banner-light.svg`
 
 ## Avatar
 
@@ -133,20 +133,18 @@ Motion personality: Calm · Precise · Intelligent · Premium. No glitch, strobe
 
 Banner-specific files under `assets/`:
 
-| Asset | Purpose | Status intent |
+| Asset | Purpose | Status |
 |---|---|---|
-| `avatar.png` | Portrait for Avatar Image component | Placeholder until approved photo |
-| `banner.svg` | Canonical dark hero — assembles all components | Empty until implementation |
-| `banner-light.svg` | Light-theme structural twin | Empty until implementation |
-| `terminal-icons.svg` | Flat icons for Window Header, status, tech chips | Empty until implementation |
-| `background-pattern.svg` | Reusable grid / glow / particle pattern defs | Empty until implementation |
+| `avatar.png` | Portrait source for Avatar Image component | Present (also inlined in banner/lanyard SVGs) |
+| `banner.svg` | Canonical dark hero — assembles all components | Present |
+| `banner-light.svg` | Light-theme structural twin | Present |
 
 ### Composition Rule for Assets
 
 - `banner.svg` / `banner-light.svg` are the shipped heroes
-- `background-pattern.svg` and `terminal-icons.svg` may be inlined or referenced during build; final README embed remains the banner file(s)
+- Grid / glow / terminal iconography are inlined inside the banner SVGs
 - Prefer SVG for all except photographic `avatar.png`
-- No asset may introduce colors or motion outside `DESIGN_SYSTEM.md`
+- No asset may introduce colors or motion outside `docs/DESIGN_SYSTEM.md`
 
 ---
 
@@ -392,7 +390,7 @@ Default copy when `banner.svg` is built:
 - [ ] Background uses design-system colors only
 - [ ] Animations match duration guidelines and stay calm
 - [ ] Layer order keeps identity above atmosphere
-- [ ] Required assets exist: `avatar.png`, `banner.svg`, `banner-light.svg`, `terminal-icons.svg`, `background-pattern.svg`
+- [ ] Required assets exist: `avatar.png`, `banner.svg`, `banner-light.svg`
 - [ ] No SVG implementation attempted in this document until explicitly requested
 
 ---

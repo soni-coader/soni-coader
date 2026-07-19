@@ -95,12 +95,10 @@ Every planned visual asset. Paths are relative to the repository root.
 
 | Asset | Role | Notes |
 |---|---|---|
-| `assets/banner.svg` | Canonical dark hero banner | Terminal + AI aesthetic; brand-first layout per `DESIGN_SYSTEM.md` / `BANNER_WIREFRAME.md` |
+| `assets/banner.svg` | Canonical dark hero banner | Terminal + AI aesthetic; brand-first layout per `docs/DESIGN_SYSTEM.md` / `docs/BANNER_WIREFRAME.md` |
 | `assets/banner-light.svg` | Light theme hero variant | Same structure; light token mapping for contrast |
-| `assets/background-pattern.svg` | Banner background pattern defs | Grid / glow / particle building blocks for hero |
-| `assets/terminal-icons.svg` | Terminal UI icons | Flat icons for window chrome, status, tech chips |
 | `assets/lanyard.svg` | Animated lanyard / badge motif | Soft motion; premium, not cartoonish |
-| `assets/avatar.png` | Profile avatar image | Real photo or approved portrait; placeholder until provided |
+| `assets/avatar.png` | Profile avatar source image | Source portrait (also embedded in banner/lanyard SVGs) |
 | `assets/stats.svg` | GitHub stats visualization | Theme colors aligned to design system where possible |
 | `assets/langs.svg` | Top languages / skill mix visual | Clean, readable; dark-first |
 | `assets/trophies.svg` | Achievements / trophies visual | Restrained; avoid noisy decoration |
@@ -109,18 +107,19 @@ Every planned visual asset. Paths are relative to the repository root.
 
 | Path | Role |
 |---|---|
-| `images/` | Additional static images if needed (screenshots, social previews) — keep minimal |
-| `docs/` | Documentation (this blueprint, brand, design system, guides) |
-| `scripts/` | Generation / maintenance scripts (stats refresh, asset helpers) — only when required |
-| `.github/workflows/` | CI for asset regeneration, snake animation, or scheduled updates |
+| `docs/` | Planning docs (brand, design system, blueprint, content, banner wireframe) |
+| `.github/workflows/` | CI for snake animation / scheduled updates |
+| `output` (remote branch) | Generated contribution snake SVGs from Actions |
 
-## Documentation Assets (Non-visual, already in scope)
+## Documentation Assets
 
 | File | Role |
 |---|---|
-| `PERSONAL_BRAND.md` | Messaging source of truth |
-| `DESIGN_SYSTEM.md` | Visual source of truth |
-| `PROJECT_BLUEPRINT.md` | Implementation blueprint (this file) |
+| `docs/PERSONAL_BRAND.md` | Messaging source of truth |
+| `docs/DESIGN_SYSTEM.md` | Visual source of truth |
+| `docs/PROJECT_BLUEPRINT.md` | Implementation blueprint (this file) |
+| `docs/CONTENT_PLAN.md` | Profile copy options |
+| `docs/BANNER_WIREFRAME.md` | Banner layout contract |
 | `README.md` | Public GitHub profile surface |
 
 ## Asset Creation Rules
