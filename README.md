@@ -2,41 +2,46 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg" />
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg" />
-    <img src="assets/banner.svg" alt="Aryant Shrirang — Full Stack Developer (MERN Stack) and AI Automation Engineer" width="100%" />
+    <img src="assets/banner.svg" width="900" alt="Aryant Shrirang — Full Stack Developer (MERN Stack) and AI Automation Engineer" />
   </picture>
-</div>
 
-<br />
+  <br/>
+  <br/>
 
-<div align="center">
-  <img src="assets/lanyard.svg" alt="Aryant Shrirang — developer ID lanyard badge" width="240" />
-</div>
+  <img src="assets/lanyard.svg" width="200" alt="Aryant Shrirang — developer ID lanyard badge" />
 
-<br />
+  <br/>
+  <br/>
 
-<div align="center">
-  <img src="assets/stats.svg" alt="Engineering overview statistics for Aryant Shrirang" width="100%" />
-  <br /><br />
-  <img src="assets/langs.svg" alt="Technology expertise by category" width="100%" />
-  <br /><br />
-  <img src="assets/trophies.svg" alt="Professional achievement highlights" width="100%" />
-</div>
+  <img src="assets/stats.svg" width="900" alt="Engineering overview statistics for Aryant Shrirang" />
 
-<br />
+  <br/>
+  <br/>
 
-<div align="center">
+  <img src="assets/langs.svg" width="900" alt="Technology expertise by category" />
+
+  <br/>
+  <br/>
+
+  <img src="assets/trophies.svg" width="900" alt="Professional achievement highlights" />
+
+  <br/>
+  <br/>
+
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake-light.svg" />
-    <img alt="Animated GitHub contribution snake for soni-coader" src="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake.svg" width="100%" />
+    <img src="https://raw.githubusercontent.com/soni-coader/soni-coader/output/github-contribution-grid-snake.svg" width="900" alt="Animated GitHub contribution snake for soni-coader" />
   </picture>
+
+  <br/>
+  <br/>
+
+  <p>
+    <a href="mailto:aryantshrirang5@gmail.com">Email</a>
+    ·
+    <a href="https://www.linkedin.com/in/aryant-shrirang-62707122a">LinkedIn</a>
+  </p>
+
+  <p><strong>Built with intention — Full Stack · AI Automation · Product Engineering</strong></p>
 </div>
-
-<br />
-
-<p align="center">
-  <a href="mailto:aryantshrirang5@gmail.com">Email</a> ·
-  <a href="https://www.linkedin.com/in/aryant-shrirang-62707122a">LinkedIn</a>
-</p>
-
-<p align="center"><strong>Built with intention — Full Stack · AI Automation · Product Engineering</strong></p>
