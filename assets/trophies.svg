@@ -1,0 +1,400 @@
+<svg width="1200" height="510" viewBox="0 0 1200 510" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="trTitle trDesc">
+  <title id="trTitle">Aryant Shrirang — Professional Achievements</title>
+  <desc id="trDesc">Animated achievement badge card highlighting core engineering strengths: project delivery, AI automation, MERN stack, RAG &amp; LLM integration, blockchain, SaaS, full stack web, and creative UI/motion design.</desc>
+
+
+  <!-- ============================================================ -->
+  <!-- DEFS — same token system as banner.svg / stats.svg / langs.svg / lanyard.svg -->
+  <!-- ============================================================ -->
+  <defs>
+
+    <linearGradient id="trBrandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+      <animate attributeName="x1" values="-20%;20%;-20%" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="80%;120%;80%" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="trAiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+      <animate attributeName="x1" values="0%;30%;0%" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="100%;70%;100%" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="trSurfaceGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+
+    <radialGradient id="trGlowPrimary" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="trGlowAccent" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="trGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="#94A3B8" stroke-width="1"/>
+    </pattern>
+
+    <filter id="trBlur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+
+    <!-- Holographic sweep gradient (same technique as lanyard.svg) -->
+    <linearGradient id="trShineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#F8FAFC" stop-opacity="0"/>
+      <stop offset="52%" stop-color="#F8FAFC" stop-opacity="0.10"/>
+      <stop offset="58%" stop-color="#06B6D4" stop-opacity="0.07"/>
+      <stop offset="65%" stop-color="#F8FAFC" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="trPanelClip">
+      <rect x="8" y="8" width="1184" height="494" rx="28"/>
+    </clipPath>
+  </defs>
+
+
+  <!-- ============================================================ -->
+  <!-- STYLE — calm, premium motion, matches banner/stats/langs/lanyard -->
+  <!-- ============================================================ -->
+  <style>
+    text { font-family: "Segoe UI", "Inter", Arial, sans-serif; }
+    .tr-mono { font-family: "SFMono-Regular", "Consolas", "Courier New", monospace; }
+
+    /* Ambient glow breathing behind the card */
+    .tr-glow-breathe { animation: trGlowBreathe 4.2s ease-in-out infinite; }
+    @keyframes trGlowBreathe {
+      0%, 100% { opacity: 0.6; }
+      50%      { opacity: 1; }
+    }
+
+    /* Very low amplitude card breathing */
+    #trCardBreathe { transform-origin: 600px 262px; animation: trCardBreathe 5.4s ease-in-out infinite; }
+    @keyframes trCardBreathe {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.004); }
+    }
+
+    /* Header entrance */
+    .tr-enter { opacity: 0; animation: trEnter 700ms ease-out both; }
+    @keyframes trEnter {
+      0%   { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Badge fade-in sequence */
+    .tr-badge { opacity: 0; animation: trBadgeIn 650ms ease-out both; transition: transform 200ms ease-out; transform-box: fill-box; transform-origin: center; }
+    .tr-badge:hover { transform: translateY(-3px); }
+    @keyframes trBadgeIn {
+      0%   { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Icon plate glow pulse + gentle hover response */
+    .tr-icon-plate { animation: trIconPulse 3.6s ease-in-out infinite; transition: transform 200ms ease-out; transform-box: fill-box; transform-origin: center; }
+    .tr-icon-plate:hover { transform: scale(1.1); }
+    @keyframes trIconPulse {
+      0%, 100% { opacity: 0.55; }
+      50%      { opacity: 0.95; }
+    }
+
+    /* Badge ring glint */
+    .tr-ring { animation: trRingGlint 4.5s ease-in-out infinite; }
+    @keyframes trRingGlint {
+      0%, 100% { opacity: 0.35; }
+      50%      { opacity: 0.75; }
+    }
+
+    /* Card-wide holographic shine sweep */
+    .tr-shine { animation: trShine 7s ease-in-out infinite; }
+    @keyframes trShine {
+      0%   { transform: translate(-260px,-260px); opacity: 0; }
+      10%  { opacity: 1; }
+      55%  { opacity: 1; }
+      72%  { opacity: 0; }
+      100% { transform: translate(260px,260px); opacity: 0; }
+    }
+
+    /* Floating highlight particles */
+    .tr-p1 { animation: trDriftA 12s ease-in-out infinite; }
+    .tr-p2 { animation: trDriftB 15s ease-in-out infinite; }
+    .tr-p3 { animation: trDriftA 10s ease-in-out infinite; }
+    .tr-p4 { animation: trDriftB 13s ease-in-out infinite; }
+    .tr-p5 { animation: trDriftC 16s ease-in-out infinite; }
+    .tr-p6 { animation: trDriftC 11s ease-in-out infinite; }
+    @keyframes trDriftA {
+      0%, 100% { transform: translate(0,0); opacity: .25; }
+      50%      { transform: translate(7px,-9px); opacity: .55; }
+    }
+    @keyframes trDriftB {
+      0%, 100% { transform: translate(0,0); opacity: .2; }
+      50%      { transform: translate(-8px,7px); opacity: .5; }
+    }
+    @keyframes trDriftC {
+      0%, 100% { transform: translate(0,0); opacity: .22; }
+      50%      { transform: translate(6px,9px); opacity: .5; }
+    }
+
+    /* Live status dot pulse */
+    .tr-live-pulse { animation: trLivePulse 3s ease-in-out infinite; }
+    @keyframes trLivePulse {
+      0%, 100% { opacity: 0.5; }
+      50%      { opacity: 1; }
+    }
+  </style>
+
+
+  <!-- ============================================================ -->
+  <!-- Card shadow + ambient glow                                    -->
+  <!-- ============================================================ -->
+  <rect x="14" y="14" width="1184" height="494" rx="28" fill="#000000" opacity="0.35" filter="url(#trBlur)"/>
+  <g class="tr-glow-breathe">
+    <ellipse cx="220" cy="70" rx="260" ry="150" fill="url(#trGlowPrimary)" filter="url(#trBlur)"/>
+  </g>
+  <g class="tr-glow-breathe" style="animation-delay:1.4s">
+    <ellipse cx="1000" cy="464" rx="260" ry="150" fill="url(#trGlowAccent)" filter="url(#trBlur)"/>
+  </g>
+
+  <g id="trCardBreathe">
+  <!-- ============================================================ -->
+  <!-- Glass panel                                                   -->
+  <!-- ============================================================ -->
+  <rect x="8" y="8" width="1184" height="494" rx="28" fill="url(#trSurfaceGradient)" fill-opacity="0.88"/>
+  <rect x="8" y="8" width="1184" height="494" rx="28" fill="none" stroke="url(#trAiGradient)" stroke-width="1.6"/>
+
+  <!-- faint technical grid + shine sweep + floating particles, clipped to panel -->
+  <g clip-path="url(#trPanelClip)">
+    <rect x="8" y="8" width="1184" height="494" fill="url(#trGrid)" opacity="0.05"/>
+    <rect class="tr-shine" x="8" y="8" width="1184" height="494" fill="url(#trShineGradient)"/>
+    <g fill="#06B6D4">
+      <circle class="tr-p1" cx="150" cy="36" r="2" opacity="0.3"/>
+      <circle class="tr-p2" cx="1080" cy="32" r="1.8" opacity="0.28"/>
+      <circle class="tr-p5" cx="600" cy="20" r="1.6" opacity="0.25"/>
+    </g>
+    <g fill="#7C3AED">
+      <circle class="tr-p3" cx="1120" cy="486" r="2" opacity="0.3"/>
+      <circle class="tr-p4" cx="90" cy="478" r="1.8" opacity="0.26"/>
+    </g>
+    <g fill="#4F46E5">
+      <circle class="tr-p6" cx="640" cy="484" r="1.7" opacity="0.25"/>
+    </g>
+  </g>
+
+
+  <!-- ============================================================ -->
+  <!-- Header                                                        -->
+  <!-- ============================================================ -->
+  <g class="tr-enter">
+    <text x="48" y="54" font-size="22" font-weight="700" fill="url(#trBrandGradient)">Professional Achievements</text>
+    <text x="48" y="76" font-size="12.5" fill="#94A3B8">Core engineering strengths proven across shipped, production work</text>
+  </g>
+
+  <g class="tr-enter" style="animation-delay:120ms">
+    <circle cx="1088" cy="48" r="4" fill="#22C55E" class="tr-live-pulse"/>
+    <text x="1100" y="52" class="tr-mono" font-size="11" letter-spacing="1" fill="#94A3B8">8 HIGHLIGHTS</text>
+  </g>
+
+  <line x1="48" y1="90" x2="1152" y2="90" stroke="#94A3B8" stroke-opacity="0.15" stroke-width="1"/>
+
+
+  <!-- Badge 1 — 80+ Projects Delivered -->
+  <g class="tr-badge" style="animation-delay:0ms">
+    <rect x="48.0" y="108" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#7C3AED" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="48.0" y="108" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="80.0" cy="142" r="18" fill="none" stroke="#7C3AED" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="80.0" cy="142" r="15" fill="#7C3AED" fill-opacity="0.15"/>
+    <g transform="translate(80.0,142)">
+      <path d="M -6,-7 C -6,-2 -3,2 0,2 C 3,2 6,-2 6,-7 Z" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M -6,-6 C -9,-6 -9,-1.5 -6,-1.5" fill="none" stroke="#06B6D4" stroke-width="1.3"/>
+        <path d="M 6,-6 C 9,-6 9,-1.5 6,-1.5" fill="none" stroke="#06B6D4" stroke-width="1.3"/>
+        <line x1="0" y1="2" x2="0" y2="5.5" stroke="#06B6D4" stroke-width="1.5"/>
+        <line x1="-4" y1="7" x2="4" y2="7" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-7" y1="-9" x2="-6" y2="-9" stroke="#06B6D4" stroke-width="1.3"/>
+        <line x1="6" y1="-9" x2="7" y2="-9" stroke="#06B6D4" stroke-width="1.3"/>
+    </g>
+
+    <text x="68.0" y="178" font-size="13.5" font-weight="700" fill="#F8FAFC">80+ Projects Delivered</text>
+    <text x="68.0" y="202" font-size="10.8" fill="#94A3B8">Production apps shipped</text>
+    <text x="68.0" y="218" font-size="10.8" fill="#94A3B8">across SaaS, AI &amp; Web3</text>
+
+    <line x1="68.0" y1="248" x2="289.0" y2="248" stroke="#7C3AED" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 2 — AI Automation Engineer -->
+  <g class="tr-badge" style="animation-delay:70ms">
+    <rect x="329.0" y="108" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#06B6D4" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="329.0" y="108" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="361.0" cy="142" r="18" fill="none" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="361.0" cy="142" r="15" fill="#06B6D4" fill-opacity="0.15"/>
+    <g transform="translate(361.0,142)">
+      <rect x="-6" y="-6" width="12" height="10" rx="3" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+        <circle cx="-2.6" cy="-1.6" r="1.05" fill="#06B6D4" stroke="none"/>
+        <circle cx="2.6" cy="-1.6" r="1.05" fill="#06B6D4" stroke="none"/>
+        <line x1="-3" y1="2" x2="3" y2="2" stroke="#06B6D4" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="0" y1="-6" x2="0" y2="-8.6" stroke="#06B6D4" stroke-width="1.3"/>
+        <circle cx="0" cy="-9.2" r="1" fill="none" stroke="#06B6D4" stroke-width="1.2"/>
+    </g>
+
+    <text x="349.0" y="178" font-size="13.5" font-weight="700" fill="#F8FAFC">AI Automation Engineer</text>
+    <text x="349.0" y="202" font-size="10.8" fill="#94A3B8">Agentic workflows with</text>
+    <text x="349.0" y="218" font-size="10.8" fill="#94A3B8">OpenAI, RAG &amp; n8n</text>
+
+    <line x1="349.0" y1="248" x2="570.0" y2="248" stroke="#06B6D4" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 3 — MERN Stack Specialist -->
+  <g class="tr-badge" style="animation-delay:140ms">
+    <rect x="610.0" y="108" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#4F46E5" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="610.0" y="108" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="642.0" cy="142" r="18" fill="none" stroke="#4F46E5" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="642.0" cy="142" r="15" fill="#4F46E5" fill-opacity="0.15"/>
+    <g transform="translate(642.0,142)">
+      <ellipse cx="0" cy="0" rx="9" ry="3.4" fill="none" stroke="#06B6D4" stroke-width="1.4"/>
+        <ellipse cx="0" cy="0" rx="9" ry="3.4" fill="none" stroke="#06B6D4" stroke-width="1.4" transform="rotate(60)"/>
+        <ellipse cx="0" cy="0" rx="9" ry="3.4" fill="none" stroke="#06B6D4" stroke-width="1.4" transform="rotate(120)"/>
+        <circle cx="0" cy="0" r="1.7" fill="#06B6D4" stroke="none"/>
+    </g>
+
+    <text x="630.0" y="178" font-size="13.5" font-weight="700" fill="#F8FAFC">MERN Stack Specialist</text>
+    <text x="630.0" y="202" font-size="10.8" fill="#94A3B8">Mongo, Express, React</text>
+    <text x="630.0" y="218" font-size="10.8" fill="#94A3B8">&amp; Node.js end-to-end</text>
+
+    <line x1="630.0" y1="248" x2="851.0" y2="248" stroke="#4F46E5" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 4 — RAG &amp;amp; LLM Integration -->
+  <g class="tr-badge" style="animation-delay:210ms">
+    <rect x="891.0" y="108" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#22C55E" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="891.0" y="108" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="923.0" cy="142" r="18" fill="none" stroke="#22C55E" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="923.0" cy="142" r="15" fill="#22C55E" fill-opacity="0.15"/>
+    <g transform="translate(923.0,142)">
+      <path d="M -7,-1.5 C -7.4,-6 -2.5,-8 0,-5.6 C 2.5,-8 7.4,-6 7,-1.5 C 7.4,3 3,6.4 0,6.2 C -3,6.4 -7.4,3 -7,-1.5 Z" fill="none" stroke="#06B6D4" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M 0,-5.6 C 0.3,-2 0.3,2.5 0,6.2" fill="none" stroke="#06B6D4" stroke-width="1.1"/>
+        <path d="M -4.6,-3 C -3.4,-2.2 -3.4,-0.4 -4.6,0.4" fill="none" stroke="#06B6D4" stroke-width="1"/>
+        <path d="M 4.6,-3 C 3.4,-2.2 3.4,-0.4 4.6,0.4" fill="none" stroke="#06B6D4" stroke-width="1"/>
+    </g>
+
+    <text x="911.0" y="178" font-size="13.5" font-weight="700" fill="#F8FAFC">RAG &amp;amp; LLM Integration</text>
+    <text x="911.0" y="202" font-size="10.8" fill="#94A3B8">Retrieval-augmented</text>
+    <text x="911.0" y="218" font-size="10.8" fill="#94A3B8">pipelines &amp; vector search</text>
+
+    <line x1="911.0" y1="248" x2="1132.0" y2="248" stroke="#22C55E" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 5 — Blockchain Development -->
+  <g class="tr-badge" style="animation-delay:280ms">
+    <rect x="48.0" y="288" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#F59E0B" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="48.0" y="288" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="80.0" cy="322" r="18" fill="none" stroke="#F59E0B" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="80.0" cy="322" r="15" fill="#F59E0B" fill-opacity="0.15"/>
+    <g transform="translate(80.0,322)">
+      <rect x="-9.5" y="-3" width="6" height="6" rx="1.5" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+        <rect x="-2" y="-3" width="6" height="6" rx="1.5" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+        <rect x="5.5" y="-3" width="6" height="6" rx="1.5" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+        <line x1="-3.5" y1="0" x2="-2" y2="0" stroke="#06B6D4" stroke-width="1.5"/>
+        <line x1="4" y1="0" x2="5.5" y2="0" stroke="#06B6D4" stroke-width="1.5"/>
+    </g>
+
+    <text x="68.0" y="358" font-size="13.5" font-weight="700" fill="#F8FAFC">Blockchain Development</text>
+    <text x="68.0" y="382" font-size="10.8" fill="#94A3B8">Web3 apps with crypto</text>
+    <text x="68.0" y="398" font-size="10.8" fill="#94A3B8">payments &amp; compliance</text>
+
+    <line x1="68.0" y1="428" x2="289.0" y2="428" stroke="#F59E0B" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 6 — SaaS Product Development -->
+  <g class="tr-badge" style="animation-delay:350ms">
+    <rect x="329.0" y="288" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#7C3AED" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="329.0" y="288" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="361.0" cy="322" r="18" fill="none" stroke="#7C3AED" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="361.0" cy="322" r="15" fill="#7C3AED" fill-opacity="0.15"/>
+    <g transform="translate(361.0,322)">
+      <path d="M 0,-9.5 L -3.2,-2.5 L 3.2,-2.5 Z" fill="none" stroke="#06B6D4" stroke-width="1.4" stroke-linejoin="round"/>
+        <rect x="-3.2" y="-2.5" width="6.4" height="7.5" rx="2.6" fill="none" stroke="#06B6D4" stroke-width="1.4"/>
+        <circle cx="0" cy="0.3" r="1.3" fill="none" stroke="#06B6D4" stroke-width="1.1"/>
+        <path d="M -3.2,3.4 L -6.2,7 L -3.2,5.6 Z" fill="none" stroke="#06B6D4" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M 3.2,3.4 L 6.2,7 L 3.2,5.6 Z" fill="none" stroke="#06B6D4" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M -1.6,7.6 L 0,10.8 L 1.6,7.6" fill="none" stroke="#06B6D4" stroke-width="1.2" stroke-linejoin="round" opacity="0.85"/>
+    </g>
+
+    <text x="349.0" y="358" font-size="13.5" font-weight="700" fill="#F8FAFC">SaaS Product Development</text>
+    <text x="349.0" y="382" font-size="10.8" fill="#94A3B8">From concept to scalable</text>
+    <text x="349.0" y="398" font-size="10.8" fill="#94A3B8">production launches</text>
+
+    <line x1="349.0" y1="428" x2="570.0" y2="428" stroke="#7C3AED" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 7 — Full Stack Web Applications -->
+  <g class="tr-badge" style="animation-delay:420ms">
+    <rect x="610.0" y="288" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#06B6D4" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="610.0" y="288" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="642.0" cy="322" r="18" fill="none" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="642.0" cy="322" r="15" fill="#06B6D4" fill-opacity="0.15"/>
+    <g transform="translate(642.0,322)">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#06B6D4" stroke-width="1.4"/>
+        <ellipse cx="0" cy="0" rx="8" ry="3.2" fill="none" stroke="#06B6D4" stroke-width="1.2"/>
+        <ellipse cx="0" cy="0" rx="3.2" ry="8" fill="none" stroke="#06B6D4" stroke-width="1.2"/>
+        <line x1="-8" y1="0" x2="8" y2="0" stroke="#06B6D4" stroke-width="1.1"/>
+    </g>
+
+    <text x="630.0" y="358" font-size="13.5" font-weight="700" fill="#F8FAFC">Full Stack Web Applications</text>
+    <text x="630.0" y="382" font-size="10.8" fill="#94A3B8">Resilient APIs paired</text>
+    <text x="630.0" y="398" font-size="10.8" fill="#94A3B8">with polished interfaces</text>
+
+    <line x1="630.0" y1="428" x2="851.0" y2="428" stroke="#06B6D4" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- Badge 8 — Creative UI &amp;amp; Motion Design -->
+  <g class="tr-badge" style="animation-delay:490ms">
+    <rect x="891.0" y="288" width="261.0" height="158" rx="18" fill="#0D1117" fill-opacity="0.42" stroke="#4F46E5" stroke-opacity="0.30" stroke-width="1.1"/>
+    <rect x="891.0" y="288" width="261.0" height="158" rx="18" fill="none" stroke="url(#trAiGradient)" stroke-opacity="0.16" stroke-width="1"/>
+
+    <circle class="tr-ring" cx="923.0" cy="322" r="18" fill="none" stroke="#4F46E5" stroke-opacity="0.3" stroke-width="1"/>
+    <circle class="tr-icon-plate" cx="923.0" cy="322" r="15" fill="#4F46E5" fill-opacity="0.15"/>
+    <g transform="translate(923.0,322)">
+      <circle cx="0" cy="-2" r="5.2" fill="none" stroke="#06B6D4" stroke-width="1.5"/>
+        <path d="M -2.2,2.6 L -2.2,5.6 Q -2.2,7 0,7 Q 2.2,7 2.2,5.6 L 2.2,2.6" fill="none" stroke="#06B6D4" stroke-width="1.4" stroke-linejoin="round"/>
+        <line x1="-1.6" y1="9" x2="1.6" y2="9" stroke="#06B6D4" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="0" y1="-10.4" x2="0" y2="-8.4" stroke="#06B6D4" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+        <line x1="-6.6" y1="-6.6" x2="-5.2" y2="-5.2" stroke="#06B6D4" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+        <line x1="6.6" y1="-6.6" x2="5.2" y2="-5.2" stroke="#06B6D4" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    </g>
+
+    <text x="911.0" y="358" font-size="13.5" font-weight="700" fill="#F8FAFC">Creative UI &amp;amp; Motion Design</text>
+    <text x="911.0" y="382" font-size="10.8" fill="#94A3B8">Interactive interfaces</text>
+    <text x="911.0" y="398" font-size="10.8" fill="#94A3B8">with GSAP &amp; Three.js</text>
+
+    <line x1="911.0" y1="428" x2="1132.0" y2="428" stroke="#4F46E5" stroke-opacity="0.28" stroke-width="1.2"/>
+  </g>
+
+
+  <!-- ============================================================ -->
+  <!-- Footer legend                                                 -->
+  <!-- ============================================================ -->
+  <text x="600" y="490" text-anchor="middle" class="tr-mono" font-size="10" fill="#94A3B8" fill-opacity="0.75">achievements reflect shipped production work, not automated GitHub metrics</text>
+
+  </g>
+
+</svg>
