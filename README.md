@@ -12,11 +12,11 @@
   <table>
     <tr>
       <td valign="middle" align="center">
-        <img src="assets/lanyard.svg" width="280" height="520" alt="Aryant Shrirang — developer ID lanyard badge" />
+        <img src="assets/lanyard.svg" width="209" height="365" alt="Aryant Shrirang — developer ID lanyard badge" />
       </td>
-      <td width="24"></td>
+      <td width="20"></td>
       <td valign="middle" align="center">
-        <img src="assets/stats.svg" width="800" height="520" alt="Engineering overview statistics for Aryant Shrirang" />
+        <img src="assets/stats.svg" width="596" height="365" alt="Engineering overview statistics for Aryant Shrirang" />
       </td>
     </tr>
   </table>
